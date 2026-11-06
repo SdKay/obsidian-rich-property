@@ -1,0 +1,245 @@
+{
+  "outsidePanelEvents": 4,
+  "events": [
+    {
+      "type": "focusin",
+      "outside": true,
+      "target": "div.cm-content.cm-lineWrapping < div.cm-contentContainer < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide < div.view-content < div.workspace-leaf-content"
+    },
+    {
+      "t": 241156629,
+      "type": "mousedown",
+      "intercepted": true,
+      "target": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=status] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller",
+      "mode": "source",
+      "activeAfter100ms": "div.cm-content.cm-lineWrapping < div.cm-contentContainer < div.cm-sizer < div.cm-scroller < div.cm-editor.cm-focused.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide < div.view-content < div.workspace-leaf-content"
+    },
+    {
+      "t": 241156720,
+      "type": "click",
+      "intercepted": true,
+      "target": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=status] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller",
+      "mode": "source",
+      "activeAfter100ms": "div.cm-content.cm-lineWrapping < div.cm-contentContainer < div.cm-sizer < div.cm-scroller < div.cm-editor.cm-focused.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide < div.view-content < div.workspace-leaf-content"
+    },
+    {
+      "t": 241157287,
+      "type": "mousedown",
+      "intercepted": true,
+      "target": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=status] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller",
+      "mode": "source",
+      "activeAfter100ms": "div.cm-content.cm-lineWrapping < div.cm-contentContainer < div.cm-sizer < div.cm-scroller < div.cm-editor.cm-focused.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide < div.view-content < div.workspace-leaf-content"
+    },
+    {
+      "t": 241157419,
+      "type": "click",
+      "intercepted": true,
+      "target": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=status] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller",
+      "mode": "source",
+      "activeAfter100ms": "div.cm-content.cm-lineWrapping < div.cm-contentContainer < div.cm-sizer < div.cm-scroller < div.cm-editor.cm-focused.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide < div.view-content < div.workspace-leaf-content"
+    },
+    {
+      "t": 241160625,
+      "type": "mousedown",
+      "intercepted": true,
+      "target": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=status] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller",
+      "mode": "source",
+      "activeAfter100ms": "div.cm-content.cm-lineWrapping < div.cm-contentContainer < div.cm-sizer < div.cm-scroller < div.cm-editor.cm-focused.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide < div.view-content < div.workspace-leaf-content"
+    },
+    {
+      "t": 241160760,
+      "type": "click",
+      "intercepted": true,
+      "target": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=status] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller",
+      "mode": "source",
+      "activeAfter100ms": "div.cm-content.cm-lineWrapping < div.cm-contentContainer < div.cm-sizer < div.cm-scroller < div.cm-editor.cm-focused.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide < div.view-content < div.workspace-leaf-content"
+    },
+    {
+      "t": 241161874,
+      "type": "mousedown",
+      "intercepted": false,
+      "target": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=priority] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller",
+      "mode": "source",
+      "activeAfter100ms": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=priority] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller"
+    },
+    {
+      "t": 241161881,
+      "type": "focusin",
+      "intercepted": false,
+      "target": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=priority] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller",
+      "mode": "source",
+      "activeAfter100ms": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=priority] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller"
+    },
+    {
+      "t": 241161985,
+      "type": "click",
+      "intercepted": false,
+      "target": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=priority] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller",
+      "mode": "source",
+      "activeAfter100ms": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=priority] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller"
+    },
+    {
+      "t": 241163070,
+      "type": "mousedown",
+      "intercepted": true,
+      "target": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=status] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller",
+      "mode": "source",
+      "activeAfter100ms": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=priority] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller"
+    },
+    {
+      "t": 241163210,
+      "type": "click",
+      "intercepted": true,
+      "target": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=status] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller",
+      "mode": "source",
+      "activeAfter100ms": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=priority] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller"
+    },
+    {
+      "t": 241165117,
+      "type": "focusin",
+      "intercepted": false,
+      "target": "div.metadata-property[data-property-key=priority] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide",
+      "mode": "source",
+      "activeAfter100ms": "div.metadata-property[data-property-key=priority] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide"
+    },
+    {
+      "t": 241165658,
+      "type": "keydown",
+      "key": "Tab",
+      "intercepted": false,
+      "target": "div.metadata-property[data-property-key=priority] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide",
+      "mode": "source",
+      "activeAfter100ms": "div.metadata-property[data-property-key=due] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide"
+    },
+    {
+      "t": 241165661,
+      "type": "focusin",
+      "intercepted": false,
+      "target": "div.metadata-property[data-property-key=due] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide",
+      "mode": "source",
+      "activeAfter100ms": "div.metadata-property[data-property-key=due] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide"
+    },
+    {
+      "t": 241166050,
+      "type": "keydown",
+      "key": "Tab",
+      "intercepted": false,
+      "target": "div.metadata-property[data-property-key=due] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide",
+      "mode": "source",
+      "activeAfter100ms": "div.metadata-property[data-property-key=author] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide"
+    },
+    {
+      "t": 241166051,
+      "type": "focusin",
+      "intercepted": false,
+      "target": "div.metadata-property[data-property-key=author] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide",
+      "mode": "source",
+      "activeAfter100ms": "div.metadata-property[data-property-key=author] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide"
+    },
+    {
+      "t": 241166557,
+      "type": "keydown",
+      "key": "Tab",
+      "intercepted": false,
+      "target": "div.metadata-property[data-property-key=author] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide",
+      "mode": "source",
+      "activeAfter100ms": "div.metadata-property[data-property-key=created] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide"
+    },
+    {
+      "t": 241166560,
+      "type": "focusin",
+      "intercepted": false,
+      "target": "div.metadata-property[data-property-key=created] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide",
+      "mode": "source",
+      "activeAfter100ms": "div.metadata-property[data-property-key=created] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide"
+    },
+    {
+      "t": 241171167,
+      "type": "focusin",
+      "intercepted": false,
+      "target": "div.metadata-property[data-property-key=created] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide",
+      "mode": "source",
+      "activeAfter100ms": "div.metadata-property[data-property-key=created] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide"
+    },
+    {
+      "t": 241172619,
+      "type": "mousedown",
+      "intercepted": true,
+      "target": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=status] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller",
+      "mode": "source",
+      "activeAfter100ms": "div.metadata-property[data-property-key=created] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide"
+    },
+    {
+      "t": 241172731,
+      "type": "click",
+      "intercepted": true,
+      "target": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=status] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller",
+      "mode": "source",
+      "activeAfter100ms": "div.metadata-property[data-property-key=created] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide"
+    },
+    {
+      "t": 241173256,
+      "type": "mousedown",
+      "intercepted": true,
+      "target": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=status] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller",
+      "mode": "source",
+      "activeAfter100ms": "div.metadata-property[data-property-key=created] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide"
+    },
+    {
+      "t": 241173421,
+      "type": "click",
+      "intercepted": true,
+      "target": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=status] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller",
+      "mode": "source",
+      "activeAfter100ms": "div.metadata-property[data-property-key=created] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide"
+    },
+    {
+      "t": 241174160,
+      "type": "mousedown",
+      "intercepted": true,
+      "target": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=status] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller",
+      "mode": "source",
+      "activeAfter100ms": "div.metadata-property[data-property-key=created] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide"
+    },
+    {
+      "t": 241174314,
+      "type": "click",
+      "intercepted": true,
+      "target": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=status] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller",
+      "mode": "source",
+      "activeAfter100ms": "div.metadata-property[data-property-key=created] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide"
+    },
+    {
+      "t": 241174485,
+      "type": "keydown",
+      "key": "Enter",
+      "intercepted": false,
+      "target": "div.metadata-property[data-property-key=created] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide",
+      "mode": "source",
+      "activeAfter100ms": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=created] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller"
+    },
+    {
+      "t": 241174488,
+      "type": "focusin",
+      "intercepted": false,
+      "target": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=created] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller",
+      "mode": "source",
+      "activeAfter100ms": "div.metadata-input-longtext < div.metadata-property-value < div.metadata-property[data-property-key=created] < div.metadata-properties < div.metadata-content < div.metadata-container < div.cm-sizer < div.cm-scroller"
+    },
+    {
+      "type": "mousedown",
+      "outside": true,
+      "target": "div.cm-content.cm-lineWrapping < div.cm-contentContainer < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide < div.view-content < div.workspace-leaf-content"
+    },
+    {
+      "type": "focusin",
+      "outside": true,
+      "target": "div.cm-content.cm-lineWrapping < div.cm-contentContainer < div.cm-sizer < div.cm-scroller < div.cm-editor.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide < div.view-content < div.workspace-leaf-content"
+    },
+    {
+      "type": "click",
+      "outside": true,
+      "target": "div.cm-content.cm-lineWrapping < div.cm-contentContainer < div.cm-sizer < div.cm-scroller < div.cm-editor.cm-focused.ͼ1.ͼ2 < div.markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding.show-properties.wide < div.view-content < div.workspace-leaf-content"
+    }
+  ]
+}
