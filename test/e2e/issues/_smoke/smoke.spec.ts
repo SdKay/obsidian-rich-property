@@ -5,5 +5,5 @@ import { test, expect } from '../../common/test-base';
 test('the real bundle loads and runs in a page', async ({ page, loadReal }) => {
 	await loadReal();
 	const settings = await page.evaluate(() => window.RichPropertyReal.loadSettings(null));
-	expect(settings).toEqual({ version: 1 });
+	expect(settings).toEqual({ version: 1, styling: true, customSchema: null });
 });

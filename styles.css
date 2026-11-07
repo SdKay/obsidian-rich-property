@@ -1,1 +1,347 @@
 /* Rich Property */
+
+.rp-schema-errors {
+	margin-top: var(--size-4-4);
+	padding: var(--size-4-3);
+	border-left: 3px solid var(--color-red);
+	background-color: rgba(var(--color-red-rgb), 0.08);
+}
+
+.rp-hidden {
+	display: none;
+}
+
+.rp-chips {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: var(--size-4-1);
+}
+
+.rp-chip {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--size-4-1);
+	padding: 0 var(--size-4-1) 0 var(--size-4-2);
+	border: 1px solid var(--interactive-accent);
+	border-radius: var(--radius-m);
+	background-color: rgba(var(--color-accent-rgb), 0.12);
+	color: var(--text-normal);
+}
+
+.rp-chip-remove,
+.rp-chip-add {
+	padding: 0 var(--size-4-2);
+	background: transparent;
+	box-shadow: none;
+	color: var(--text-muted);
+	cursor: pointer;
+}
+
+.rp-chip-remove {
+	height: auto;
+	padding: 0 var(--size-4-1);
+}
+
+.rp-chip-add {
+	border: 1px dashed var(--background-modifier-border);
+	border-radius: var(--radius-m);
+}
+
+.rp-chip-remove:hover,
+.rp-chip-add:hover {
+	color: var(--text-normal);
+}
+
+.rp-chip-remove:focus-visible,
+.rp-chip-add:focus-visible {
+	outline: 2px solid var(--interactive-accent);
+	outline-offset: 2px;
+}
+
+
+/* Values editor: one line per value. */
+.rp-opts {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	margin: var(--size-4-2) 0 var(--size-4-3);
+}
+
+.rp-opt {
+	display: grid;
+	grid-template-columns: auto auto minmax(6em, 14em) 1fr auto;
+	align-items: center;
+	gap: var(--size-4-2);
+	padding: 2px var(--size-4-2);
+	border-radius: var(--radius-s);
+}
+
+.rp-opt:hover {
+	background-color: var(--background-modifier-hover);
+}
+
+.rp-opt.is-invalid {
+	outline: 1px solid var(--text-error);
+}
+
+.rp-opt.is-dragging {
+	opacity: 0.5;
+}
+
+.rp-opt-grip {
+	color: var(--text-faint);
+	cursor: grab;
+	user-select: none;
+}
+
+.rp-opt-dot {
+	width: 16px;
+	height: 16px;
+	min-height: 0;
+	padding: 0;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 50%;
+	background: transparent;
+	box-shadow: none;
+}
+
+.rp-opt-text {
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	cursor: text;
+}
+
+.rp-opt-desc {
+	color: var(--text-muted);
+	font-size: var(--font-ui-small);
+}
+
+.rp-opt-text.is-placeholder {
+	color: var(--text-faint);
+}
+
+.rp-opt-input {
+	min-width: 0;
+	width: 100%;
+	height: auto;
+	padding: 0 var(--size-4-1);
+}
+
+.rp-opt-remove {
+	padding: 0 var(--size-4-2);
+	background: transparent;
+	box-shadow: none;
+	color: var(--text-faint);
+	cursor: pointer;
+}
+
+.rp-opt-remove:hover {
+	color: var(--text-error);
+}
+
+.rp-opt-add {
+	align-self: flex-start;
+	margin-top: var(--size-4-1);
+	background: transparent;
+	box-shadow: none;
+	color: var(--text-muted);
+	cursor: pointer;
+}
+
+.rp-opt-add:hover {
+	color: var(--text-normal);
+}
+
+.rp-opt-dot:focus-visible,
+.rp-opt-remove:focus-visible,
+.rp-opt-add:focus-visible,
+.rp-opt-text:focus-visible {
+	outline: 2px solid var(--interactive-accent);
+	outline-offset: 2px;
+}
+
+.rp-setting-block {
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+/* Rule editor: two blocks on one grid, every row starting at the same left edge. */
+.rp-rule-modal {
+	width: min(760px, 92vw);
+}
+
+.rp-rule {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-4-3);
+}
+
+.rp-rule-block {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-4-2);
+	padding: var(--size-4-3);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: var(--radius-m);
+}
+
+.rp-rule-head {
+	display: flex;
+	align-items: center;
+	gap: var(--size-4-3);
+}
+
+.rp-rule-label {
+	min-width: 2.5em;
+	font-weight: var(--font-semibold);
+}
+
+.rp-rule-row {
+	display: grid;
+	grid-template-columns: 11em 11em 1fr auto;
+	align-items: start;
+	gap: var(--size-4-2);
+}
+
+.rp-rule-select {
+	width: 100%;
+}
+
+.rp-rule-values {
+	min-width: 0;
+}
+
+.rp-rule-note {
+	color: var(--text-muted);
+	font-size: var(--font-ui-small);
+}
+
+.rp-rule-add {
+	align-self: flex-start;
+	background: transparent;
+	box-shadow: none;
+	color: var(--text-muted);
+	cursor: pointer;
+}
+
+.rp-rule-add:hover {
+	color: var(--text-normal);
+}
+
+.rp-rule-footer {
+	display: flex;
+	justify-content: flex-end;
+	gap: var(--size-4-2);
+	margin-top: var(--size-4-3);
+}
+
+/* The dot shows a value's color; a filled dot means solid. */
+.rp-opt-dot[data-color="red"] { border-color: var(--color-red); background-color: rgba(var(--color-red-rgb), 0.25); }
+.rp-opt-dot[data-color="red"][data-solid="true"] { background-color: var(--color-red); }
+.rp-opt-dot[data-color="orange"] { border-color: var(--color-orange); background-color: rgba(var(--color-orange-rgb), 0.25); }
+.rp-opt-dot[data-color="orange"][data-solid="true"] { background-color: var(--color-orange); }
+.rp-opt-dot[data-color="yellow"] { border-color: var(--color-yellow); background-color: rgba(var(--color-yellow-rgb), 0.25); }
+.rp-opt-dot[data-color="yellow"][data-solid="true"] { background-color: var(--color-yellow); }
+.rp-opt-dot[data-color="green"] { border-color: var(--color-green); background-color: rgba(var(--color-green-rgb), 0.25); }
+.rp-opt-dot[data-color="green"][data-solid="true"] { background-color: var(--color-green); }
+.rp-opt-dot[data-color="cyan"] { border-color: var(--color-cyan); background-color: rgba(var(--color-cyan-rgb), 0.25); }
+.rp-opt-dot[data-color="cyan"][data-solid="true"] { background-color: var(--color-cyan); }
+.rp-opt-dot[data-color="blue"] { border-color: var(--color-blue); background-color: rgba(var(--color-blue-rgb), 0.25); }
+.rp-opt-dot[data-color="blue"][data-solid="true"] { background-color: var(--color-blue); }
+.rp-opt-dot[data-color="purple"] { border-color: var(--color-purple); background-color: rgba(var(--color-purple-rgb), 0.25); }
+.rp-opt-dot[data-color="purple"][data-solid="true"] { background-color: var(--color-purple); }
+.rp-opt-dot[data-color="pink"] { border-color: var(--color-pink); background-color: rgba(var(--color-pink-rgb), 0.25); }
+.rp-opt-dot[data-color="pink"][data-solid="true"] { background-color: var(--color-pink); }
+.rp-opt-dot[data-color="neutral"] { border-color: var(--text-faint); background-color: var(--background-modifier-hover); }
+.rp-opt-dot[data-color="neutral"][data-solid="true"] { background-color: var(--text-faint); }
+
+.rp-menu-desc {
+	color: var(--text-muted);
+	font-size: var(--font-ui-smaller);
+}
+
+/* Tag vocabulary: collapsible axes. */
+.rp-axes {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-4-1);
+	margin: var(--size-4-2) 0 var(--size-4-3);
+}
+
+.rp-axis {
+	border: 1px solid var(--background-modifier-border);
+	border-radius: var(--radius-m);
+}
+
+.rp-axis-head {
+	display: flex;
+	align-items: center;
+	gap: var(--size-4-3);
+	padding: var(--size-4-1) var(--size-4-2);
+}
+
+.rp-axis-toggle {
+	flex: 1;
+	justify-content: flex-start;
+	background: transparent;
+	box-shadow: none;
+	text-align: left;
+	cursor: pointer;
+}
+
+.rp-axis-prefix {
+	color: var(--text-muted);
+	font-size: var(--font-ui-small);
+}
+
+.rp-axis-body {
+	padding: 0 var(--size-4-3) var(--size-4-2);
+}
+
+.rp-axis-names {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--size-4-3);
+	margin-bottom: var(--size-4-2);
+}
+
+.rp-axis-field {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	font-size: var(--font-ui-small);
+	color: var(--text-muted);
+}
+
+.rp-axis-bare {
+	display: block;
+	margin-bottom: var(--size-4-2);
+	font-size: var(--font-ui-small);
+}
+
+.rp-axis-toggle:focus-visible {
+	outline: 2px solid var(--interactive-accent);
+	outline-offset: 2px;
+}
+
+/* Folder list in the property editor. */
+.rp-folders {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-4-1);
+	margin: var(--size-4-2) 0 var(--size-4-3);
+}
+
+.rp-folder {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: center;
+	gap: var(--size-4-2);
+}
+
+.rp-folder-input.is-missing {
+	border-color: var(--text-error);
+}
