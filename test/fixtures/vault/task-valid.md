@@ -3,7 +3,7 @@ type: task
 project: SFI
 status: doing
 priority: high
-due: 2026-11-20
+deadline: 2026-11-20
 author: human
 created: 2026-11-01 10:00:00
 tags:
