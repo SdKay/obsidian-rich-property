@@ -1,0 +1,11 @@
+/**
+ * Whether a note path is under `folder`, or any path when no folder is set. A folder with one name
+ * (`decisions`) matches that folder at any depth, such as `2-projects/SFI/decisions`; a folder
+ * with a path (`2-projects`) is a prefix from the vault root.
+ */
+export function inFolder(path: string, folder: string | undefined): boolean {
+	if (!folder) return true;
+	const clean = folder.replace(/^\/+|\/+$/g, '');
+	if (clean.includes('/')) return path.startsWith(`${clean}/`);
+	return path.split('/').slice(0, -1).includes(clean);
+}

@@ -1,4 +1,6 @@
 import { Plugin } from 'obsidian';
+import { EditorController } from './editor/controller';
+import { attachInterceptor } from './editor/interceptor';
 import { resolveSchema, type ActiveSchema } from './schema/load';
 import { activeSlot, loadSettings, type RichPropertySettings } from './settings';
 import { RichPropertySettingTab } from './settingTab';
@@ -8,11 +10,15 @@ import { RichPropertySettingTab } from './settingTab';
 export default class RichPropertyPlugin extends Plugin {
 	settings: RichPropertySettings = loadSettings(null);
 	active: ActiveSchema = resolveSchema(null);
+	private controller = new EditorController(this);
 
 	async onload(): Promise<void> {
 		this.settings = loadSettings((await this.loadData()) as Partial<RichPropertySettings> | null);
 		this.active = resolveSchema(activeSlot(this.settings), this.settings.blank);
 		this.addSettingTab(new RichPropertySettingTab(this.app, this));
+		this.controller.start();
+		attachInterceptor(this, this.app.workspace.containerEl.ownerDocument);
+		this.registerEvent(this.app.workspace.on('window-open', (_win, win) => attachInterceptor(this, win.document)));
 	}
 
 	async saveSettings(): Promise<void> {
@@ -22,5 +28,6 @@ export default class RichPropertyPlugin extends Plugin {
 	async applySettings(): Promise<void> {
 		await this.saveSettings();
 		this.active = resolveSchema(activeSlot(this.settings), this.settings.blank);
+		this.controller.refresh();
 	}
 }

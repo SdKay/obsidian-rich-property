@@ -1,10 +1,122 @@
 /* Rich Property */
 
+.rp-on .metadata-property[data-rp-state] {
+	border-left: 3px solid var(--color-red);
+	background-color: rgba(var(--color-red-rgb), 0.1);
+}
+
+.rp-on .metadata-property[data-rp-state] .metadata-property-key-input,
+.rp-on .metadata-property[data-rp-state] .metadata-input-longtext,
+.rp-on .metadata-property[data-rp-state] .metadata-input,
+.rp-on .metadata-property[data-rp-state] .multi-select-pill-content,
+.rp-on .metadata-property[data-rp-state] .metadata-link-inner {
+	color: var(--color-red);
+}
+
+.rp-on .metadata-property[data-rp-state] .metadata-property-key-input {
+	text-decoration: underline wavy var(--color-red);
+	text-underline-offset: 3px;
+}
+
+/* A colored value, whether a single value or a pill in a list. The color sets three variables, then one rule uses them. */
+.rp-on .metadata-property .metadata-property-value[data-rp-color] .metadata-input-longtext,
+.rp-on .metadata-property .multi-select-pill[data-rp-color] {
+	flex: 0 1 auto;
+	width: auto;
+	max-width: 100%;
+	border: 1px solid var(--rp-edge);
+	border-radius: var(--radius-m);
+	padding: 0 var(--size-4-2);
+	font-weight: var(--font-medium);
+	color: var(--rp-fg);
+	background-color: var(--rp-bg);
+}
+
+/* The native pill spaces its text with margins, so it takes no side padding of its own. The container loses its own padding and border so a pill starts exactly where a single value does. */
+.rp-on .metadata-property .multi-select-pill[data-rp-color] {
+	padding: var(--pill-padding-y) 0;
+}
+
+.rp-on .metadata-property .metadata-property-value[data-rp-list] .multi-select-container {
+	padding-inline: 0;
+	border-inline: 0;
+}
+
+.rp-on .metadata-property .multi-select-pill[data-rp-color] .multi-select-pill-content,
+.rp-on .metadata-property .multi-select-pill[data-rp-color] .multi-select-pill-remove-button {
+	color: inherit;
+}
+
+.rp-on .metadata-property .metadata-property-value[data-rp-color="red"] .metadata-input-longtext,
+.rp-on .metadata-property .multi-select-pill[data-rp-color="red"] { --rp-fg: var(--color-red); --rp-bg: rgba(var(--color-red-rgb), 0.15); --rp-edge: var(--color-red); }
+.rp-on .metadata-property .metadata-property-value[data-rp-color="red"][data-rp-fill="solid"] .metadata-input-longtext,
+.rp-on .metadata-property .multi-select-pill[data-rp-color="red"][data-rp-fill="solid"] { --rp-fg: var(--text-on-accent); --rp-bg: var(--color-red); --rp-edge: var(--color-red); }
+.rp-on .metadata-property .metadata-property-value[data-rp-color="orange"] .metadata-input-longtext,
+.rp-on .metadata-property .multi-select-pill[data-rp-color="orange"] { --rp-fg: var(--color-orange); --rp-bg: rgba(var(--color-orange-rgb), 0.15); --rp-edge: var(--color-orange); }
+.rp-on .metadata-property .metadata-property-value[data-rp-color="orange"][data-rp-fill="solid"] .metadata-input-longtext,
+.rp-on .metadata-property .multi-select-pill[data-rp-color="orange"][data-rp-fill="solid"] { --rp-fg: var(--text-on-accent); --rp-bg: var(--color-orange); --rp-edge: var(--color-orange); }
+.rp-on .metadata-property .metadata-property-value[data-rp-color="yellow"] .metadata-input-longtext,
+.rp-on .metadata-property .multi-select-pill[data-rp-color="yellow"] { --rp-fg: var(--color-yellow); --rp-bg: rgba(var(--color-yellow-rgb), 0.15); --rp-edge: var(--color-yellow); }
+.rp-on .metadata-property .metadata-property-value[data-rp-color="yellow"][data-rp-fill="solid"] .metadata-input-longtext,
+.rp-on .metadata-property .multi-select-pill[data-rp-color="yellow"][data-rp-fill="solid"] { --rp-fg: var(--text-on-accent); --rp-bg: var(--color-yellow); --rp-edge: var(--color-yellow); }
+.rp-on .metadata-property .metadata-property-value[data-rp-color="green"] .metadata-input-longtext,
+.rp-on .metadata-property .multi-select-pill[data-rp-color="green"] { --rp-fg: var(--color-green); --rp-bg: rgba(var(--color-green-rgb), 0.15); --rp-edge: var(--color-green); }
+.rp-on .metadata-property .metadata-property-value[data-rp-color="green"][data-rp-fill="solid"] .metadata-input-longtext,
+.rp-on .metadata-property .multi-select-pill[data-rp-color="green"][data-rp-fill="solid"] { --rp-fg: var(--text-on-accent); --rp-bg: var(--color-green); --rp-edge: var(--color-green); }
+.rp-on .metadata-property .metadata-property-value[data-rp-color="cyan"] .metadata-input-longtext,
+.rp-on .metadata-property .multi-select-pill[data-rp-color="cyan"] { --rp-fg: var(--color-cyan); --rp-bg: rgba(var(--color-cyan-rgb), 0.15); --rp-edge: var(--color-cyan); }
+.rp-on .metadata-property .metadata-property-value[data-rp-color="cyan"][data-rp-fill="solid"] .metadata-input-longtext,
+.rp-on .metadata-property .multi-select-pill[data-rp-color="cyan"][data-rp-fill="solid"] { --rp-fg: var(--text-on-accent); --rp-bg: var(--color-cyan); --rp-edge: var(--color-cyan); }
+.rp-on .metadata-property .metadata-property-value[data-rp-color="blue"] .metadata-input-longtext,
+.rp-on .metadata-property .multi-select-pill[data-rp-color="blue"] { --rp-fg: var(--color-blue); --rp-bg: rgba(var(--color-blue-rgb), 0.15); --rp-edge: var(--color-blue); }
+.rp-on .metadata-property .metadata-property-value[data-rp-color="blue"][data-rp-fill="solid"] .metadata-input-longtext,
+.rp-on .metadata-property .multi-select-pill[data-rp-color="blue"][data-rp-fill="solid"] { --rp-fg: var(--text-on-accent); --rp-bg: var(--color-blue); --rp-edge: var(--color-blue); }
+.rp-on .metadata-property .metadata-property-value[data-rp-color="purple"] .metadata-input-longtext,
+.rp-on .metadata-property .multi-select-pill[data-rp-color="purple"] { --rp-fg: var(--color-purple); --rp-bg: rgba(var(--color-purple-rgb), 0.15); --rp-edge: var(--color-purple); }
+.rp-on .metadata-property .metadata-property-value[data-rp-color="purple"][data-rp-fill="solid"] .metadata-input-longtext,
+.rp-on .metadata-property .multi-select-pill[data-rp-color="purple"][data-rp-fill="solid"] { --rp-fg: var(--text-on-accent); --rp-bg: var(--color-purple); --rp-edge: var(--color-purple); }
+.rp-on .metadata-property .metadata-property-value[data-rp-color="pink"] .metadata-input-longtext,
+.rp-on .metadata-property .multi-select-pill[data-rp-color="pink"] { --rp-fg: var(--color-pink); --rp-bg: rgba(var(--color-pink-rgb), 0.15); --rp-edge: var(--color-pink); }
+.rp-on .metadata-property .metadata-property-value[data-rp-color="pink"][data-rp-fill="solid"] .metadata-input-longtext,
+.rp-on .metadata-property .multi-select-pill[data-rp-color="pink"][data-rp-fill="solid"] { --rp-fg: var(--text-on-accent); --rp-bg: var(--color-pink); --rp-edge: var(--color-pink); }
+.rp-on .metadata-property .metadata-property-value[data-rp-color="neutral"] .metadata-input-longtext,
+.rp-on .metadata-property .multi-select-pill[data-rp-color="neutral"] { --rp-fg: var(--text-muted); --rp-bg: var(--background-modifier-hover); --rp-edge: var(--text-muted); }
+.rp-on .metadata-property .metadata-property-value[data-rp-color="neutral"][data-rp-fill="solid"] .metadata-input-longtext,
+.rp-on .metadata-property .multi-select-pill[data-rp-color="neutral"][data-rp-fill="solid"] { --rp-fg: var(--text-on-accent); --rp-bg: var(--text-faint); --rp-edge: var(--text-faint); }
+
 .rp-schema-errors {
 	margin-top: var(--size-4-4);
 	padding: var(--size-4-3);
 	border-left: 3px solid var(--color-red);
 	background-color: rgba(var(--color-red-rgb), 0.08);
+}
+
+.rp-on .rp-placeholders {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--size-4-2);
+	padding: var(--size-4-2) 0;
+}
+
+.rp-on .rp-placeholder {
+	min-height: var(--input-height);
+	padding: 0 var(--size-4-3);
+	border: 1px dashed var(--background-modifier-border);
+	border-radius: var(--radius-s);
+	background: transparent;
+	color: var(--text-muted);
+	font-size: var(--font-ui-small);
+	cursor: pointer;
+}
+
+.rp-on .rp-placeholder:hover {
+	color: var(--text-normal);
+	border-color: var(--interactive-accent);
+}
+
+.rp-on .rp-placeholder:focus-visible {
+	outline: 2px solid var(--interactive-accent);
+	outline-offset: 2px;
 }
 
 .rp-hidden {
