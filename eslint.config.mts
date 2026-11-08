@@ -8,6 +8,7 @@ export default defineConfig(
 		'dist',
 		'tmp',
 		'scripts',
+		'skills',
 		'test',
 		'esbuild.config.mjs',
 		'changelog-gen.mjs',

@@ -14,7 +14,9 @@
 		"lockfile:normalize": "node lockfile-normalize.mjs",
 		"changelog:check": "node esbuild.config.mjs generate && git diff --exit-code -- src/changelog/generated.ts",
 		"verify:ci": "node -e \"require('fs').rmSync('node_modules',{recursive:true,force:true})\" && npm ci && npm run build && npm run changelog:check && npm run check:release && npm test",
-		"check:release": "node check-release.mjs"
+		"check:release": "node check-release.mjs",
+		"build:skill": "node scripts/build-skill.mjs",
+		"skill:check": "node scripts/build-skill.mjs && git diff --exit-code -- skills/obsidian-rich-property/scripts/rich-property.cjs"
 	},
 	"keywords": [],
 	"license": "AGPL-3.0",
