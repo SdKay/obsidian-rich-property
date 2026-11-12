@@ -1,7 +1,7 @@
 {
 	"id": "rich-property",
 	"name": "Rich Property",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"minAppVersion": "1.8.7",
 	"description": "Edit note properties with dropdowns, type-aware fields and colored values, and flag values that break your schema.",
 	"author": "sdking.xing",
