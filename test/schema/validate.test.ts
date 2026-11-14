@@ -89,7 +89,7 @@ describe('validateNote: other rules', () => {
 
 	it('treats empty values as fine, and skips kinds whose values are not resolvable yet', () => {
 		expect(state({ type: 'task', status: null }, 'status')).toEqual({ state: 'ok' });
-		expect(state({ type: 'task', project: 'SFI' }, 'project')).toEqual({ state: 'ok' });
+		expect(state({ type: 'task', project: 'api' }, 'project')).toEqual({ state: 'ok' });
 		expect(state({ tags: ['anything'] }, 'tags')).toEqual({ state: 'ok' });
 		expect(state({ type: 'task', related: [['x']] }, 'related')).toEqual({ state: 'ok' });
 	});

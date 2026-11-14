@@ -14,7 +14,7 @@ describe('default preset', () => {
 		expect(r.ok).toBe(true);
 	});
 
-	it('has the 12 types of AGENT.md 4.1', () => {
+	it('has the 12 types', () => {
 		expect(values('type', {})).toEqual([
 			'capture', 'reference', 'output', 'decision', 'task', 'devlog',
 			'solution', 'period', 'knowledge', 'brief', 'moc', 'rules',
@@ -33,7 +33,7 @@ describe('default preset', () => {
 		expect(colors).toEqual({ none: 'orange', reviewed: 'green', changed: 'red' });
 	});
 
-	it('shows the extra fields of each type as placeholders (AGENT.md 4.1 table)', () => {
+	it('shows the extra fields of each type as placeholders', () => {
 		expect(missingFields(c, { type: 'task' })).toEqual(['project', 'status', 'priority', 'related', 'deadline']);
 		expect(missingFields(c, { type: 'brief' })).toEqual(['project', 'customer', 'platform', 'status', 'deadline']);
 		expect(missingFields(c, { type: 'solution' })).toEqual(['project', 'status', 'related', 'verified-at']);
@@ -47,7 +47,7 @@ describe('default preset', () => {
 	});
 });
 
-describe('default preset field order (AGENT.md 4.1, property writing order)', () => {
+describe('default preset field order', () => {
 	const GENERAL_ONE = ['type', 'review', 'reviewed', 'author', 'audience', 'ai-edit', 'tags'];
 	const GENERAL_TWO = ['created', 'updated', 'schema'];
 
@@ -71,7 +71,7 @@ const TYPES = [
 const AI_EDIT = ['forbidden', 'ask', 'allowed'];
 const AUDIENCE = ['ai', 'both', 'human'];
 
-describe('default preset tag vocabulary (AGENT.md 5.10)', () => {
+describe('default preset tag vocabulary', () => {
 	it('has the six axes with their labels, prefixes, ordered values and bare wifi', () => {
 		const source = DEFAULT_SCHEMA.fields.tags?.source;
 		expect(source?.kind).toBe('tag-vocab');
@@ -96,7 +96,7 @@ describe('default preset tag vocabulary (AGENT.md 5.10)', () => {
 	});
 });
 
-describe('default preset reserved keys (AGENT.md 4.1)', () => {
+describe('default preset reserved keys', () => {
 	it('lists exactly the 12 plugin-reserved keys', () => {
 		expect(DEFAULT_SCHEMA.reserved).toEqual([
 			'excalidraw-plugin', 'kanban-plugin', 'cssclasses', 'aliases', 'banner', 'banner_x',
@@ -105,7 +105,7 @@ describe('default preset reserved keys (AGENT.md 4.1)', () => {
 	});
 });
 
-describe('default preset field kinds (AGENT.md 4.1, requirements 3.1 and 3.3)', () => {
+describe('default preset field kinds', () => {
 	const KINDS: Record<string, FieldKind> = {
 		type: 'enum', author: 'enum', audience: 'enum', 'ai-edit': 'enum', review: 'enum', project: 'enum',
 		status: 'enum', priority: 'enum', 'dir-audience': 'enum', 'dir-ai-edit': 'enum', 'dir-ai-create': 'enum',
@@ -131,7 +131,7 @@ describe('default preset field kinds (AGENT.md 4.1, requirements 3.1 and 3.3)', 
 	});
 });
 
-describe('default preset static enum values (AGENT.md 4.1)', () => {
+describe('default preset static enum values', () => {
 	it.each([
 		['author', ['human', 'agent', 'mixed']],
 		['audience', AUDIENCE],
@@ -162,7 +162,7 @@ describe('default preset conditions (requirements 3.1)', () => {
 	});
 });
 
-describe('default preset type limits (AGENT.md 4.1 table)', () => {
+describe('default preset type limits', () => {
 	const LIMITS: Record<string, string[]> = {
 		project: ['brief', 'solution', 'task', 'decision', 'devlog'],
 		status: ['brief', 'solution', 'task', 'decision'],

@@ -1,7 +1,7 @@
 /**
  * Whether a note path is under `folder`, or any path when no folder is set. A folder with one name
- * (`decisions`) matches that folder at any depth, such as `2-projects/SFI/decisions`; a folder
- * with a path (`2-projects`) is a prefix from the vault root.
+ * (`decisions`) matches that folder at any depth, such as `projects/app/decisions`; a folder
+ * with a path (`projects`) is a prefix from the vault root.
  */
 export function inFolder(path: string, folder: string | undefined): boolean {
 	if (!folder) return true;

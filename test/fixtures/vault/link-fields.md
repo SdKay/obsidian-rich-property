@@ -1,6 +1,6 @@
 ---
 type: task
-project: SFI
+project: api
 status: todo
 related:
   - "[[task-valid]]"

@@ -84,7 +84,7 @@ user's own setting: never rewrite it by hand.
 - **Use the user's own spelling for values.** `in progress` is fine with the space; values are written to
   the note exactly as given and compared with the same case.
 - **Folder sources.** In `vault-dir`, `paths` are vault-relative with no trailing slash (`Clients`,
-  `2-projects`). `validate` does not check that the folders exist; the plugin marks a missing one
+  `projects`). `validate` does not check that the folders exist; the plugin marks a missing one
   in the settings and offers no values from it. `requireFile` (for example `brief.md`) keeps only the
   folders that hold that file; leave it out to offer every subfolder. `depth: 2` also offers the folders
   one level down, written `Parent/Child`; a folder without `requireFile` is skipped but its children are still read.

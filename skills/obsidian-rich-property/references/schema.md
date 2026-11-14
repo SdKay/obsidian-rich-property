@@ -77,7 +77,7 @@ checked for their format, not offered a list. A `text-list` is a real YAML list 
 | `note-search` | `folder` (optional): limits the search | `link`, `link-list` |
 
 A `note-search` `folder` of one name (`decisions`) matches that folder at any depth; a path
-(`2-projects`) is a prefix from the vault root.
+(`projects`) is a prefix from the vault root.
 
 ### An option (a value in a list)
 

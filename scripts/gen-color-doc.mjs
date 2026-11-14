@@ -1,13 +1,17 @@
 // Writes a note that shows every colored value of the built-in preset, using the plugin's own badge
 // markup, so what you see here is what the property panel shows. Run after changing preset colors.
-// Usage: node scripts/gen-color-doc.mjs [vaultPath]
+// Usage: node scripts/gen-color-doc.mjs <vaultPath>   (or set RP_VAULT)
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { build } from 'esbuild';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const vault = process.argv[2] ?? process.env.RP_VAULT ?? '/mnt/c/Users/silas_xing/Documents/Obsidian';
+const vault = process.argv[2] ?? process.env.RP_VAULT;
+if (!vault) {
+	console.error('Give the vault folder as an argument, or set RP_VAULT');
+	process.exit(1);
+}
 const tmp = fs.mkdtempSync(path.join(fs.realpathSync('/tmp'), 'rp-colors-'));
 await build({ entryPoints: [path.join(root, 'src/schema/presets/default.ts')], bundle: true, format: 'esm', outfile: path.join(tmp, 'preset.mjs'), platform: 'node', logLevel: 'error' });
 const { DEFAULT_SCHEMA } = await import(path.join(tmp, 'preset.mjs'));

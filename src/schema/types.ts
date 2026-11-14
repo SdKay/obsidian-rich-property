@@ -29,7 +29,7 @@ export interface TagAxis {
 export type ValueSource =
 	| { kind: 'static'; values: Option[] }
 	/**
-	 * The folders inside each of these vault folders, written as the path from that folder (`WHC-self`, `WHC-self/GSPI-v12`).
+	 * The folders inside each of these vault folders, written as the path from that folder (`app`, `app/web`).
 	 * `depth` is how many levels to read (default 1). With `requireFile`, only folders that contain that file count.
 	 */
 	| { kind: 'vault-dir'; paths: string[]; requireFile?: string; depth?: number }

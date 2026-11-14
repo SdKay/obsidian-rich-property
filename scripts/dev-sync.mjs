@@ -1,13 +1,17 @@
 // Copies the build output into the vault's plugin folder and the fixture notes into the vault's
 // tmp/ scratch area (not tracked by the vault's git).
-// Usage: node scripts/dev-sync.mjs [vaultPath]   (default below; also via RP_VAULT)
+// Usage: node scripts/dev-sync.mjs <vaultPath>   (or set RP_VAULT)
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
-const vault = args.find((a) => !a.startsWith('--')) ?? process.env.RP_VAULT ?? '/mnt/c/Users/silas_xing/Documents/Obsidian';
+const vault = args.find((a) => !a.startsWith('--')) ?? process.env.RP_VAULT;
+if (!vault) {
+	console.error('Give the vault folder as an argument, or set RP_VAULT');
+	process.exit(1);
+}
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'manifest.json'), 'utf8'));
 const pluginDir = path.join(vault, '.obsidian', 'plugins', manifest.id);
 

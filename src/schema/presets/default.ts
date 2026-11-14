@@ -128,7 +128,7 @@ const BUILT_IN: Schema = {
 	},
 };
 
-/** Fields that have a description in AGENT.md 4.1; the key is an i18n entry so it follows the UI language. */
+/** Fields that have a description; the key is an i18n entry so it follows the UI language. */
 const DESCRIBED = [
 	'type', 'created', 'updated', 'tags', 'author', 'audience', 'ai-edit', 'review', 'reviewed', 'schema',
 	'project', 'customer', 'platform', 'verified-at', 'status', 'priority', 'deadline', 'date', 'range', 'related', 'tasks', 'supersedes', 'superseded_by',
