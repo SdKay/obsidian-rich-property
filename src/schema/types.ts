@@ -34,7 +34,8 @@ export type ValueSource =
 	 */
 	| { kind: 'vault-dir'; paths: string[]; requireFile?: string; depth?: number }
 	| { kind: 'tag-vocab'; axes: TagAxis[] }
-	| { kind: 'note-search'; folder?: string };
+	/** Notes to search: those under `folder`, or under any of `folders`; with neither, every note. */
+	| { kind: 'note-search'; folder?: string; folders?: string[] };
 
 export type Condition =
 	| { field: string; in: string[] }

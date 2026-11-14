@@ -9,3 +9,8 @@ export function inFolder(path: string, folder: string | undefined): boolean {
 	if (clean.includes('/')) return path.startsWith(`${clean}/`);
 	return path.split('/').slice(0, -1).includes(clean);
 }
+
+/** Whether a note path is under any of the folders; with none given, any path. */
+export function inAnyFolder(path: string, folders: string[]): boolean {
+	return folders.length === 0 || folders.some((f) => inFolder(path, f));
+}

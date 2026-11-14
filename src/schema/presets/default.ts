@@ -29,6 +29,7 @@ const STATUS_BY_TYPE: Record<string, Option[]> = {
 	solution: [opt('draft', 'orange'), opt('stable', 'green'), opt('superseded', 'neutral')],
 	task: [opt('todo', PLAIN), opt('doing', 'blue'), opt('blocked', 'red'), opt('done', 'green')],
 	decision: [opt('proposed', 'orange'), opt('accepted', 'green'), opt('superseded', 'neutral')],
+	output: [opt('draft', 'orange'), opt('final', 'green'), opt('superseded', 'neutral')],
 };
 // The union of every type's values; a value shared by several types keeps the first type's color.
 const STATUS_FALLBACK = Object.values(STATUS_BY_TYPE)
@@ -92,19 +93,19 @@ const BUILT_IN: Schema = {
 		project: {
 			kind: 'enum',
 			source: { kind: 'vault-dir', paths: ['2-projects'], requireFile: 'brief.md', depth: 2 },
-			...onTypes('brief', 'solution', 'task', 'decision', 'devlog'),
+			...onTypes('brief', 'solution', 'task', 'decision', 'devlog', 'output'),
 		},
 		customer: { kind: 'text', ...onTypes('brief') },
 		platform: { kind: 'text-list', ...onTypes('brief') },
 		status: {
 			kind: 'enum',
 			source: { kind: 'static', values: STATUS_FALLBACK },
-			...onTypes('brief', 'solution', 'task', 'decision'),
+			...onTypes('brief', 'solution', 'task', 'decision', 'output'),
 		},
 		priority: enumOf([opt('low', PLAIN), opt('medium', 'orange'), opt('high', 'red')], onTypes('task')),
-		supersedes: { kind: 'link', source: { kind: 'note-search', folder: 'decisions' }, ...onTypes('decision') },
-		superseded_by: { kind: 'link', source: { kind: 'note-search', folder: 'decisions' }, ...onTypes('decision') },
-		related: { kind: 'link-list', source: { kind: 'note-search' }, ...onTypes('solution', 'task', 'decision') },
+		supersedes: { kind: 'link', source: { kind: 'note-search', folders: ['decisions', 'output'] }, ...onTypes('decision', 'output') },
+		superseded_by: { kind: 'link', source: { kind: 'note-search', folders: ['decisions', 'output'] }, ...onTypes('decision', 'output') },
+		related: { kind: 'link-list', source: { kind: 'note-search' }, ...onTypes('solution', 'task', 'decision', 'output') },
 		'verified-at': {
 			kind: 'text-list',
 			pattern: '^[^@\\s]+@[^:\\s]+:[0-9a-f]{10}$',

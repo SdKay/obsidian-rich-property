@@ -126,6 +126,23 @@ describe('parseSchema', () => {
 			if (!r.ok) expect(r.errors.join('\n')).toContain('"depth" must be a whole number from 1 to 3');
 		});
 
+		it('keeps a note search saved with one folder, and accepts a list of folders', () => {
+			for (const source of [{ kind: 'note-search', folder: 'decisions' }, { kind: 'note-search', folders: ['decisions', 'output'] }]) {
+				const s = minimal();
+				(s.fields as Record<string, unknown>).link = { kind: 'link', source };
+				const r = parseSchema(s);
+				expect(r.ok ? r.schema.fields.link?.source : undefined).toEqual(source);
+			}
+		});
+
+		it.each([[[]], [['']], ['decisions'], [[1]]])('rejects folders of %j', (folders) => {
+			const s = minimal();
+			(s.fields as Record<string, unknown>).link = { kind: 'link', source: { kind: 'note-search', folders } };
+			const r = parseSchema(s);
+			expect(r.ok).toBe(false);
+			if (!r.ok) expect(r.errors.join('\n')).toContain('"folders" must be a non-empty list of folder names');
+		});
+
 		it('upgrades values saved as plain strings to options, so earlier saved rules keep working', () => {
 			const r = parseSchema(withAxes([{ label: 'Area', prefix: 'area', values: ['work', 'home'] }]));
 			expect(r.ok).toBe(true);

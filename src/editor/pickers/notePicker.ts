@@ -1,6 +1,6 @@
 import { Notice, SuggestModal, prepareFuzzySearch, type App, type TFile } from 'obsidian';
 import { fmt, t } from '../../i18n';
-import { inFolder } from './folderMatch';
+import { inAnyFolder } from './folderMatch';
 import type { EditContext } from './registry';
 
 /** The text written to a note: the vault path without the extension, so it matches the vault's link convention. */
@@ -8,8 +8,8 @@ export function linkFor(file: TFile): string {
 	return `[[${file.path.replace(/\.md$/, '')}]]`;
 }
 
-export function candidateNotes(app: App, folder: string | undefined, self: TFile | null): TFile[] {
-	return app.vault.getMarkdownFiles().filter((f) => inFolder(f.path, folder) && f !== self);
+export function candidateNotes(app: App, folders: string[], self: TFile | null): TFile[] {
+	return app.vault.getMarkdownFiles().filter((f) => inAnyFolder(f.path, folders) && f !== self);
 }
 
 class NoteModal extends SuggestModal<TFile> {
@@ -50,8 +50,8 @@ function currentLinks(value: unknown): string[] {
  */
 export function noteEditor(ctx: EditContext): (() => void) | undefined {
 	const source = ctx.def.source;
-	const folder = source?.kind === 'note-search' ? source.folder : undefined;
-	const files = candidateNotes(ctx.app, folder, ctx.app.workspace.getActiveFile());
+	const folders = source?.kind === 'note-search' ? [...(source.folder ? [source.folder] : []), ...(source.folders ?? [])] : [];
+	const files = candidateNotes(ctx.app, folders, ctx.app.workspace.getActiveFile());
 	if (files.length === 0) return undefined;
 	return () => {
 		new NoteModal(ctx.app, files, (file) => {

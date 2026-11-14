@@ -26,6 +26,7 @@ describe('default preset', () => {
 		expect(values('status', { type: 'solution' })).toEqual(['draft', 'stable', 'superseded']);
 		expect(values('status', { type: 'brief' })).toEqual(['planned', 'active', 'paused', 'done']);
 		expect(values('status', { type: 'decision' })).toEqual(['proposed', 'accepted', 'superseded']);
+		expect(values('status', { type: 'output' })).toEqual(['draft', 'final', 'superseded']);
 	});
 
 	it('colors review as none orange, reviewed green, changed red (FR-4)', () => {
@@ -38,6 +39,7 @@ describe('default preset', () => {
 		expect(missingFields(c, { type: 'brief' })).toEqual(['project', 'customer', 'platform', 'status', 'deadline']);
 		expect(missingFields(c, { type: 'solution' })).toEqual(['project', 'status', 'related', 'verified-at']);
 		expect(missingFields(c, { type: 'decision' })).toEqual(['project', 'status', 'supersedes', 'superseded_by', 'related']);
+		expect(missingFields(c, { type: 'output' })).toEqual(['project', 'status', 'supersedes', 'superseded_by', 'related']);
 		expect(missingFields(c, { type: 'devlog' })).toEqual(['project', 'date', 'tasks']);
 		expect(missingFields(c, { type: 'period' })).toEqual(['range']);
 		expect(missingFields(c, { type: 'knowledge' })).toEqual([]);
@@ -164,16 +166,16 @@ describe('default preset conditions (requirements 3.1)', () => {
 
 describe('default preset type limits', () => {
 	const LIMITS: Record<string, string[]> = {
-		project: ['brief', 'solution', 'task', 'decision', 'devlog'],
-		status: ['brief', 'solution', 'task', 'decision'],
+		project: ['brief', 'solution', 'task', 'decision', 'devlog', 'output'],
+		status: ['brief', 'solution', 'task', 'decision', 'output'],
 		customer: ['brief'],
 		platform: ['brief'],
 		'verified-at': ['solution'],
 		priority: ['task'],
 		deadline: ['brief', 'task'],
-		related: ['solution', 'task', 'decision'],
-		supersedes: ['decision'],
-		superseded_by: ['decision'],
+		related: ['solution', 'task', 'decision', 'output'],
+		supersedes: ['decision', 'output'],
+		superseded_by: ['decision', 'output'],
 		date: ['devlog'],
 		tasks: ['devlog'],
 		range: ['period'],
@@ -203,8 +205,8 @@ describe('default preset sources', () => {
 		expect(DEFAULT_SCHEMA.fields.project?.source).toEqual({ kind: 'vault-dir', paths: ['2-projects'], requireFile: 'brief.md', depth: 2 });
 	});
 
-	it('searches the decisions folder for supersedes and superseded_by', () => {
-		expect(DEFAULT_SCHEMA.fields.supersedes?.source).toEqual({ kind: 'note-search', folder: 'decisions' });
-		expect(DEFAULT_SCHEMA.fields.superseded_by?.source).toEqual({ kind: 'note-search', folder: 'decisions' });
+	it('searches the decisions and output folders for supersedes and superseded_by', () => {
+		expect(DEFAULT_SCHEMA.fields.supersedes?.source).toEqual({ kind: 'note-search', folders: ['decisions', 'output'] });
+		expect(DEFAULT_SCHEMA.fields.superseded_by?.source).toEqual({ kind: 'note-search', folders: ['decisions', 'output'] });
 	});
 });

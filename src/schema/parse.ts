@@ -70,6 +70,7 @@ function checkSource(where: string, src: unknown, errors: string[], allowEmpty =
 			break;
 		case 'note-search':
 			if (src.folder !== undefined && typeof src.folder !== 'string') errors.push(`${where}: "folder" must be a string`);
+			if (src.folders !== undefined && (!isStrArr(src.folders) || src.folders.length === 0 || src.folders.some((x) => x.trim() === ''))) errors.push(`${where}: "folders" must be a non-empty list of folder names`);
 			break;
 		default:
 			errors.push(`${where}: unknown source kind "${String(src.kind)}"`);
