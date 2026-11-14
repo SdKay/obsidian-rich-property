@@ -1,0 +1,18 @@
+{
+	"version": 1,
+	"styling": false,
+	"blank": false,
+	"customSchema": {
+		"schemaVersion": 2,
+		"typeField": "type",
+		"reserved": ["cssclasses", "aliases"],
+		"fields": {
+			"type": { "kind": "enum", "source": { "kind": "static", "values": [{ "value": "task" }, { "value": "my-own-type", "color": "pink" }] } },
+			"status": { "kind": "enum", "source": { "kind": "static", "values": [{ "value": "todo" }, { "value": "my-own-state", "color": "purple" }] }, "types": ["task", "my-own-type"] },
+			"project": { "kind": "enum", "source": { "kind": "vault-dir", "paths": ["Work"] } },
+			"note-to-self": { "kind": "text", "description": "My own words." }
+		},
+		"rules": []
+	},
+	"blankSchema": null
+}

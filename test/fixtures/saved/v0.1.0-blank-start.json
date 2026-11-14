@@ -1,0 +1,27 @@
+{
+	"version": 1,
+	"styling": true,
+	"blank": true,
+	"customSchema": null,
+	"blankSchema": {
+		"schemaVersion": 2,
+		"typeField": "type",
+		"reserved": ["cssclasses", "aliases", "banner"],
+		"fields": {
+			"type": { "kind": "enum", "source": { "kind": "static", "values": [{ "value": "ticket", "color": "blue" }, { "value": "note" }] } },
+			"status": {
+				"kind": "enum",
+				"description": "Where the ticket stands.",
+				"source": { "kind": "static", "values": [{ "value": "open", "color": "orange" }, { "value": "closed", "color": "green", "solid": true, "description": "Done." }] },
+				"types": ["ticket"]
+			},
+			"estimate": { "kind": "int", "types": ["ticket"] },
+			"owner": { "kind": "text" },
+			"due": { "kind": "date", "types": ["ticket"] },
+			"labels": { "kind": "text-list" }
+		},
+		"rules": [
+			{ "id": "estimate-when-open", "match": "all", "when": [{ "field": "status", "in": ["open"] }], "then": [{ "field": "estimate", "effect": "available" }] }
+		]
+	}
+}
