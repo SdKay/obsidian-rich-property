@@ -168,6 +168,8 @@ export const ko: Dict = {
 	'val.review.reviewed': '검토되었고 이후 에이전트가 수정하지 않음.',
 	'val.review.changed': '검토되었거나 사람이 쓴 내용을 이후 에이전트가 수정함.',
 	'val.lifecycle.archived': '하위 트리 전체가 읽기 전용이며 지식 근거로 쓰지 않음.',
+	'val.project-mode.full': '전체 프로젝트. devlog, tasks, decisions, solutions를 포함한다.',
+	'val.project-mode.light': '경량 프로젝트. brief만 유지하며 과정이 아니라 결과를 쓴다.',
 
 	// Tag groups
 	axesDesc: '태그 그룹. 열어서 이름, 접두사, 값을 바꿀 수 있습니다.',
@@ -196,6 +198,7 @@ export const ko: Dict = {
 	kindTextList: '텍스트 목록',
 
 	// Fields added for projects
+	'desc.project-mode': '프로젝트를 어디까지 기록할지. 없으면 full로 본다.',
 	'desc.customer': '고객 이름. 일반 텍스트. 중국어/영어는 소유자가 정하며 영어는 소문자. 내부 개발은 self로 씀.',
 	'desc.platform': '플랫폼 짧은 이름 목록. 모두 소문자. 고객 프로젝트에는 보통 하나.',
 	'desc.verified-at': '검증한 위치. <저장소>@<브랜치>:<커밋 앞 10자> 형식. 원격에 병합된 커밋만. 플러그인은 형식만 확인하고 이것은 확인하지 않음.',

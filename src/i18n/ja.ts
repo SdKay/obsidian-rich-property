@@ -168,6 +168,8 @@ export const ja: Dict = {
 	'val.review.reviewed': 'レビュー済みで、その後エージェントによる変更なし。',
 	'val.review.changed': 'レビュー済み、または人が書いた内容を後からエージェントが変更した。',
 	'val.lifecycle.archived': 'サブツリー全体が読み取り専用で、知識の根拠としては使わない。',
+	'val.project-mode.full': 'フルプロジェクト。devlog、tasks、decisions、solutions を含む。',
+	'val.project-mode.light': '軽量プロジェクト。brief だけを維持し、過程ではなく結果を書く。',
 
 	// Tag groups
 	axesDesc: 'タグのグループ。開いて名前・接頭辞・値を変更できます。',
@@ -196,6 +198,7 @@ export const ja: Dict = {
 	kindTextList: 'テキストのリスト',
 
 	// Fields added for projects
+	'desc.project-mode': 'プロジェクトをどこまで記録するか。未指定は full として扱う。',
 	'desc.customer': '顧客名。プレーンテキスト。中国語か英語かはオーナーが決める。英語は小文字。社内開発は self と書く。',
 	'desc.platform': 'プラットフォームの短い名前のリスト。すべて小文字。顧客プロジェクトでは通常 1 つ。',
 	'desc.verified-at': '検証した場所。<リポジトリ>@<ブランチ>:<コミットの先頭 10 文字> の形で書く。リモートにマージ済みのコミットのみ。プラグインが調べるのは形式だけで、これは調べない。',

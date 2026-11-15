@@ -95,6 +95,7 @@ const BUILT_IN: Schema = {
 			source: { kind: 'vault-dir', paths: ['2-projects'], requireFile: 'brief.md', depth: 2 },
 			...onTypes('brief', 'solution', 'task', 'decision', 'devlog', 'output'),
 		},
+		'project-mode': enumOf([opt('full', 'neutral', 'project-mode.full'), opt('light', 'cyan', 'project-mode.light')], { ...onTypes('brief'), placeholder: true }),
 		customer: { kind: 'text', ...onTypes('brief') },
 		platform: { kind: 'text-list', ...onTypes('brief') },
 		status: {
@@ -132,7 +133,7 @@ const BUILT_IN: Schema = {
 /** Fields that have a description; the key is an i18n entry so it follows the UI language. */
 const DESCRIBED = [
 	'type', 'created', 'updated', 'tags', 'author', 'audience', 'ai-edit', 'review', 'reviewed', 'schema',
-	'project', 'customer', 'platform', 'verified-at', 'status', 'priority', 'deadline', 'date', 'range', 'related', 'tasks', 'supersedes', 'superseded_by',
+	'project', 'project-mode', 'customer', 'platform', 'verified-at', 'status', 'priority', 'deadline', 'date', 'range', 'related', 'tasks', 'supersedes', 'superseded_by',
 	'dir-accepts', 'dir-audience', 'dir-ai-edit', 'dir-ai-create', 'dir-review', 'dir-lifecycle',
 ];
 

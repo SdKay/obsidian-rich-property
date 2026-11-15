@@ -128,6 +128,7 @@ var BUILT_IN = {
       source: { kind: "vault-dir", paths: ["2-projects"], requireFile: "brief.md", depth: 2 },
       ...onTypes("brief", "solution", "task", "decision", "devlog", "output")
     },
+    "project-mode": enumOf([opt("full", "neutral", "project-mode.full"), opt("light", "cyan", "project-mode.light")], { ...onTypes("brief"), placeholder: true }),
     customer: { kind: "text", ...onTypes("brief") },
     platform: { kind: "text-list", ...onTypes("brief") },
     status: {
@@ -172,6 +173,7 @@ var DESCRIBED = [
   "reviewed",
   "schema",
   "project",
+  "project-mode",
   "customer",
   "platform",
   "verified-at",

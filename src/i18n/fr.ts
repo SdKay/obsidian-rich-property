@@ -168,6 +168,8 @@ export const fr: Dict = {
 	'val.review.reviewed': 'Relue et non modifiée par un agent depuis.',
 	'val.review.changed': 'Contenu relu ou écrit par un humain qu’un agent a modifié depuis.',
 	'val.lifecycle.archived': 'Toute l’arborescence est en lecture seule et n’est pas une source de connaissance.',
+	'val.project-mode.full': 'Un projet complet, avec devlog, tâches, décisions et solutions.',
+	'val.project-mode.light': 'Un projet léger : seul le brief est tenu, orienté résultat et non processus.',
 
 	// Tag groups
 	axesDesc: 'Groupes d’étiquettes. Ouvrez-en un pour modifier son nom, son préfixe et ses valeurs.',
@@ -196,6 +198,7 @@ export const fr: Dict = {
 	kindTextList: 'Liste de textes',
 
 	// Fields added for projects
+	'desc.project-mode': 'Le degré de détail du suivi du projet ; sans valeur, full s’applique.',
 	'desc.customer': 'Le nom du client, en texte, en chinois ou en anglais selon le propriétaire ; l’anglais en minuscules. Le travail interne s’écrit self.',
 	'desc.platform': 'Noms courts de plateformes, tous en minuscules. Un projet client n’en a généralement qu’une.',
 	'desc.verified-at': 'Où cela a été vérifié, sous la forme <dépôt>@<branche>:<10 premiers caractères du commit>. Uniquement des commits déjà fusionnés dans le dépôt distant ; le plugin ne vérifie que la forme, pas cela.',

@@ -168,6 +168,8 @@ export const de: Dict = {
 	'val.review.reviewed': 'Geprüft und seitdem von keinem Agenten geändert.',
 	'val.review.changed': 'Geprüfter oder von Menschen geschriebener Inhalt, den ein Agent später geändert hat.',
 	'val.lifecycle.archived': 'Der gesamte Teilbaum ist schreibgeschützt und keine Wissensquelle.',
+	'val.project-mode.full': 'Ein volles Projekt mit Devlog, Aufgaben, Entscheidungen und Lösungen.',
+	'val.project-mode.light': 'Ein leichtes Projekt: nur der Brief wird geführt, ergebnisorientiert und ohne Verlauf.',
 
 	// Tag groups
 	axesDesc: 'Tag-Gruppen. Öffnen Sie eine, um Name, Präfix und Werte zu ändern.',
@@ -196,6 +198,7 @@ export const de: Dict = {
 	kindTextList: 'Liste von Text',
 
 	// Fields added for projects
+	'desc.project-mode': 'Wie viel vom Projekt festgehalten wird; fehlt der Wert, gilt full.',
 	'desc.customer': 'Der Kundenname als Text, auf Chinesisch oder Englisch nach Entscheidung des Eigentümers; Englisch klein. Interne Arbeit wird self geschrieben.',
 	'desc.platform': 'Kurznamen der Plattformen, alles klein. Ein Kundenprojekt hat meist nur eine.',
 	'desc.verified-at': 'Wo es geprüft wurde, als <Repo>@<Branch>:<erste 10 Zeichen des Commits>. Nur bereits ins Remote übernommene Commits; das Plugin prüft nur die Form, nicht dies.',

@@ -36,7 +36,7 @@ describe('default preset', () => {
 
 	it('shows the extra fields of each type as placeholders', () => {
 		expect(missingFields(c, { type: 'task' })).toEqual(['project', 'status', 'priority', 'related', 'deadline']);
-		expect(missingFields(c, { type: 'brief' })).toEqual(['project', 'customer', 'platform', 'status', 'deadline']);
+		expect(missingFields(c, { type: 'brief' })).toEqual(['project', 'project-mode', 'customer', 'platform', 'status', 'deadline']);
 		expect(missingFields(c, { type: 'solution' })).toEqual(['project', 'status', 'related', 'verified-at']);
 		expect(missingFields(c, { type: 'decision' })).toEqual(['project', 'status', 'supersedes', 'superseded_by', 'related']);
 		expect(missingFields(c, { type: 'output' })).toEqual(['project', 'status', 'supersedes', 'superseded_by', 'related']);
@@ -109,7 +109,7 @@ describe('default preset reserved keys', () => {
 
 describe('default preset field kinds', () => {
 	const KINDS: Record<string, FieldKind> = {
-		type: 'enum', author: 'enum', audience: 'enum', 'ai-edit': 'enum', review: 'enum', project: 'enum',
+		type: 'enum', author: 'enum', audience: 'enum', 'ai-edit': 'enum', review: 'enum', project: 'enum', 'project-mode': 'enum',
 		status: 'enum', priority: 'enum', 'dir-audience': 'enum', 'dir-ai-edit': 'enum', 'dir-ai-create': 'enum',
 		'dir-lifecycle': 'enum',
 		'dir-accepts': 'multi-enum',
@@ -144,6 +144,7 @@ describe('default preset static enum values', () => {
 		['dir-ai-edit', AI_EDIT],
 		['dir-ai-create', AI_EDIT],
 		['dir-lifecycle', ['active', 'archived']],
+		['project-mode', ['full', 'light']],
 		['dir-accepts', TYPES],
 	])('%s offers its values in order', (key, expected) => {
 		expect(values(key, {})).toEqual(expected);
@@ -167,6 +168,7 @@ describe('default preset conditions (requirements 3.1)', () => {
 describe('default preset type limits', () => {
 	const LIMITS: Record<string, string[]> = {
 		project: ['brief', 'solution', 'task', 'decision', 'devlog', 'output'],
+		'project-mode': ['brief'],
 		status: ['brief', 'solution', 'task', 'decision', 'output'],
 		customer: ['brief'],
 		platform: ['brief'],

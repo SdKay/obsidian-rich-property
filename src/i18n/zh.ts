@@ -168,6 +168,8 @@ export const zh: Dict = {
 	'val.review.reviewed': '已审且之后未被 agent 改动。',
 	'val.review.changed': '已审或人写的内容后来被 agent 改过。',
 	'val.lifecycle.archived': '整棵子树只读，不作为知识引用依据。',
+	'val.project-mode.full': '全量项目，含 devlog、tasks、decisions、solutions。',
+	'val.project-mode.light': '轻量项目，只维护 brief，结果导向，不记录过程。',
 
 	// Tag groups
 	axesDesc: '标签分组。展开一组可修改它的名称、前缀和取值。',
@@ -196,6 +198,7 @@ export const zh: Dict = {
 	kindTextList: '文本列表',
 
 	// Fields added for projects
+	'desc.project-mode': '项目记录到什么程度；缺省按 full 处理。',
 	'desc.customer': '客户名，纯文本，中文或英文由 owner 决定；英文一律小写。内部开发写 self。',
 	'desc.platform': '平台短名列表，一律小写；客户项目通常只有一个。',
 	'desc.verified-at': '验证所在的位置，写成 <仓库>@<分支>:<commit 前 10 位>。只记已合入远端的提交；插件只检查格式，不检查这一点。',

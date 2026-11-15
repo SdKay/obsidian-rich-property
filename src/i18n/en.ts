@@ -169,6 +169,8 @@ export const en = {
 	'val.review.reviewed': 'Reviewed, and not changed by an agent since.',
 	'val.review.changed': 'Reviewed or human-written content that an agent has changed since.',
 	'val.lifecycle.archived': 'The whole subtree is read-only and not used as a source of knowledge.',
+	'val.project-mode.full': 'A full project, with devlog, tasks, decisions and solutions.',
+	'val.project-mode.light': 'A light project: only the brief is kept, written for the result and not the process.',
 
 	// Tag groups
 	axesDesc: 'Tag groups. Open one to change its name, prefix and values.',
@@ -197,6 +199,7 @@ export const en = {
 	kindTextList: 'List of text',
 
 	// Fields added for projects
+	'desc.project-mode': 'How much of the project is written down; when missing it counts as full.',
 	'desc.customer': 'The customer, in plain text. Chinese or English as the owner decides; English in lowercase. Internal work is written self.',
 	'desc.platform': 'Short platform names, all lowercase. A customer project usually has just one.',
 	'desc.verified-at': 'Where it was verified, as <repo>@<branch>:<first 10 characters of the commit>. Only commits already merged to the remote; the plugin checks the form, not that.',
