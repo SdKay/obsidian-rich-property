@@ -9,6 +9,13 @@ export interface ChangelogEntry {
 }
 
 export const CHANGELOG: readonly ChangelogEntry[] = [
+	{ version: "0.1.1", date: "2026-11-15", changes: [
+		"feat: let Rich Search read the property rules",
+		"feat(schema): let a brief say how much of the project is written down",
+		"feat(schema): give output notes their own fields",
+		"test: keep rules saved by earlier versions reading the same",
+		"chore: clean up leftover junk code",
+	] },
 	{ version: "0.1.0", date: "2026-11-12", changes: [
 		"docs: add the README, the support links and a script that shows the built-in colors",
 		"feat(skill): add an agent skill that writes, checks and installs the rules",
