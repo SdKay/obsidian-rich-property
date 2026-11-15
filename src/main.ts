@@ -1,4 +1,6 @@
 import { Plugin } from 'obsidian';
+import { createApi } from './api';
+import type { RichPropertyApi } from './richPropertyApi';
 import { EditorController } from './editor/controller';
 import { attachInterceptor } from './editor/interceptor';
 import { resolveSchema, type ActiveSchema } from './schema/load';
@@ -11,6 +13,9 @@ export default class RichPropertyPlugin extends Plugin {
 	settings: RichPropertySettings = loadSettings(null);
 	active: ActiveSchema = resolveSchema(null);
 	private controller = new EditorController(this);
+	private apiHandle = createApi(this);
+	/** Read only; see `RichPropertyApi`. Looked up by other plugins on every use. */
+	readonly api: RichPropertyApi = this.apiHandle.api;
 
 	async onload(): Promise<void> {
 		this.settings = loadSettings((await this.loadData()) as Partial<RichPropertySettings> | null);
@@ -29,5 +34,6 @@ export default class RichPropertyPlugin extends Plugin {
 		await this.saveSettings();
 		this.active = resolveSchema(activeSlot(this.settings), this.settings.blank);
 		this.controller.refresh();
+		this.apiHandle.notify();
 	}
 }

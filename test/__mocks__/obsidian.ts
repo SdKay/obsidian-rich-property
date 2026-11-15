@@ -9,3 +9,7 @@ export class Notice {
 }
 export class Plugin {}
 export class PluginSettingTab {}
+export class TFolder {}
+export class TFile {}
+export const normalizePath = (p: string): string => p;
+export const getLanguage = (): string => 'en';
